@@ -1,0 +1,240 @@
+/* ContactsPage styles placeholder */
+.contacts-page {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-ivory);
+}
+
+/* ===== Main ===== */
+
+.contacts-page__main {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* padding: var(--space-xl) var(--space-md); */
+}
+
+/* ===== Intro ===== */
+
+.contacts-page__intro {
+  max-width: 620px;
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+}
+
+.contacts-page__label {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--color-gold);
+}
+
+.contacts-page__intro h1 {
+  margin: 0 0 var(--space-sm);
+
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-ivory);
+}
+
+.contacts-page__intro p {
+  max-width: 500px;
+  margin: 0 auto;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+/* ===== Contact cards ===== */
+
+.contacts-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.contact-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+
+  min-height: 110px;
+  padding: var(--space-md);
+
+  background-color: #c7c7c7;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: #061A40;
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 160, 95, 0.45);
+  background-color: #f5f5f5;
+}
+
+/* ===== Icon ===== */
+
+.contact-card__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  color: #061A40;
+
+  transition:
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.contact-card:hover .contact-card__icon {
+  border-color: var(--color-gold);
+  transform: scale(1.05);
+}
+
+.contact-card__icon svg {
+  font-size: 22px;
+}
+
+/* ===== Text ===== */
+
+.contact-card__content {
+  min-width: 0;
+  flex: 1;
+}
+
+.contact-card__label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  color: #061A40;
+}
+
+.contact-card__content h2 {
+  margin: 0 0 4px;
+
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  color: #061A40;
+}
+
+.contact-card__content p {
+  margin: 0;
+
+  font-size: 0.78rem;
+  line-height: 1.4;
+
+  color: #061A40;
+}
+
+/* ===== Arrow ===== */
+
+.contact-card__arrow {
+  flex-shrink: 0;
+
+  font-size: 18px !important;
+  color: #061A40;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.contact-card:hover .contact-card__arrow {
+  color: var(--color-gold);
+  transform: translate(2px, -2px);
+}
+
+/* ===== Bottom text ===== */
+
+.contacts-page__bottom {
+  margin-top: var(--space-xl);
+
+  text-align: center;
+}
+
+.contacts-page__bottom p {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+
+  color: var(--color-muted);
+}
+
+.contacts-page__mobile-break {
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .contacts-page__mobile-break {
+    display: none;
+  }
+}
+
+
+/* ===== Desktop ===== */
+
+@media (min-width: 700px) {
+  .contacts-page__main {
+    /* padding: 60px var(--space-lg) 80px; */
+  }
+
+  .contacts-page__intro {
+    margin-bottom: 50px;
+  }
+
+  .contacts-page__intro h1 {
+    font-size: 2.7rem;
+  }
+
+  .contacts-page__intro p {
+    font-size: 0.95rem;
+  }
+
+  .contacts-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .contact-card {
+    min-height: 130px;
+    padding: var(--space-lg);
+  }
+
+  .contact-card__icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .contact-card__content h2 {
+    font-size: 1.2rem;
+  }
+}

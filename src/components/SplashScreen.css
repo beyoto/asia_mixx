@@ -1,0 +1,30 @@
+/* SplashScreen styles placeholder */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+}
+
+.splash-screen__brand {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+  color: var(--color-bronze);
+}
+
+.splash-screen--fade-out {
+  animation: splash-fade-out 0.35s ease forwards;
+}
+
+@keyframes splash-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

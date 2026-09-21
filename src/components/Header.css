@@ -1,0 +1,120 @@
+/* Header styles placeholder */
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.site-header__icon-btn {
+  color: var(--color-ivory);
+  padding: var(--space-xs);
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.site-header__icon-btn:focus {
+  outline: none;
+}
+
+.site-header__icon-btn:active {
+  background: transparent;
+}
+
+.site-header__heart {
+  position: relative;
+}
+
+.site-header__badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 999px;
+}
+
+.site-header__brand {
+  flex: 1;
+  text-align: center;
+}
+
+.site-header__brand h1 {
+  font-size: 2rem;
+  color: var(--color-ivory);
+  letter-spacing: 0.02em;
+  margin-bottom: 2%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.site-header__brand p {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+/* ===== Slide-in menu ===== */
+.site-header__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(23, 19, 15, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+}
+
+.site-header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 78%;
+  max-width: 320px;
+  background-color: rgba(33, 28, 23, 0.97);
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  animation: slide-in 0.25s ease;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.site-header__close-btn {
+  align-self: flex-end;
+  color: var(--color-muted);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-md);
+}
+
+.site-header__menu a {
+  color: var(--color-ivory);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: color var(--transition);
+}
+
+.site-header__menu a:hover {
+  color: var(--color-gold);
+}
+
+@media (min-width: 960px) {
+  .site-header__brand h1 {
+    font-size: 2.75rem;
+  }
+}

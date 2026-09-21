@@ -1,0 +1,157 @@
+/* AdminAnalytics styles placeholder */
+.admin-analytics {
+  padding: var(--space-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.admin-analytics h1 {
+  font-size: 1.4rem;
+  color: var(--color-ivory);
+  margin-bottom: var(--space-md);
+}
+
+.admin-analytics__controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.admin-analytics__select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-ivory);
+}
+
+.admin-analytics__range-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.admin-analytics__range-btn {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-muted);
+  transition: color var(--transition), border-color var(--transition), background-color var(--transition);
+}
+
+.admin-analytics__range-btn--active {
+  color: var(--color-bg);
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.admin-analytics__chart-wrap {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-xs) var(--space-md);
+}
+
+.admin-analytics__status {
+  text-align: center;
+  color: var(--color-muted);
+  padding: var(--space-xl) 0;
+}
+
+.admin-analytics__hint {
+  margin-top: var(--space-sm);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.admin-analytics__compare-note {
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.admin-analytics__compare-list {
+  margin-top: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.admin-analytics__compare-list h2 {
+  font-size: 1rem;
+  color: var(--color-ivory);
+  margin-bottom: 4px;
+}
+
+.admin-analytics__compare-hint {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.admin-analytics__compare-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.admin-analytics__compare-row:last-child {
+  border-bottom: none;
+}
+
+.admin-analytics__compare-row input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.admin-analytics__compare-name {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--color-ivory);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-analytics__compare-count {
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+@media (min-width: 700px) {
+  .admin-analytics {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .admin-analytics__controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .admin-analytics__select {
+    width: auto;
+    min-width: 220px;
+  }
+
+  .admin-analytics__range-buttons {
+    flex: none;
+  }
+
+  .admin-analytics__range-btn {
+    flex: none;
+    padding: 8px 18px;
+  }
+}
