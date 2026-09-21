@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: `http://192.168.94.98:3000/api`
+  baseURL: `${import.meta.env.VITE_API_URL}/api`
 });
 
 // Перед каждым запросом проверяем, есть ли токен в localStorage,
